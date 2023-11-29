@@ -1,0 +1,9 @@
+#!/bin/bash
+
+code=s_evol.py
+t_applied=2.0
+e_applied=0.6
+
+nohup python ${code} ${t_applied} ${e_applied} 2>/dev/null & echo $! > run.pid
+
+
