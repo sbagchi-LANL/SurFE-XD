@@ -1,0 +1,12 @@
+#!/bin/bash
+source /home/sbagchi/miniconda3/etc/profile.d/conda.sh
+conda activate fenicsproject
+
+code=surface_evolution.py
+as_ratio=1.0
+e_field=0.7
+domain_height_ratio=0.4
+
+nohup python ${code} ${as_ratio} ${e_field} ${domain_height_ratio}  2>/dev/null & echo $! > run.pid
+
+
